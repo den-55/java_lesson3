@@ -8,13 +8,20 @@ import ru.lesson3.enums.Gender;
  *
  * @return
  * @date 08.04.2021
- * @author DEnis
+ * @author Denis
  */
 
-public class Dog {
-    private String name;
-    private Integer age;
-    private Gender gender;
+public class Dog extends  Animal {
+
+    @Override
+    public void say(String message) {
+        System.out.println("Gaf Gaf " + message);
+    }
+
+    @Override
+    public void sleep(Integer sleepMs) {
+        System.out.println("я не хочу спать " + sleepMs);
+    }
 
     public Dog(String name, Integer age, Gender gender) {
         this.name = name;
@@ -45,4 +52,13 @@ public class Dog {
     public void setGender(Gender gender) {
         this.gender = gender;
     }
- }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                '}';
+    }
+}

@@ -1,7 +1,8 @@
 package ru.lesson3;
 
-public interface DogActions {
-    void gafGaf(String message);
+public interface AnimalActions {
+
+    void say(String message);
 
     void sleep(Integer sleepMs);
 }
